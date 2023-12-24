@@ -1,0 +1,189 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Zahra",
+      "lastName": "nejati"
+    }
+  ],
+  "income": [
+    {
+      "title": "خرید خونه",
+      "type": "income",
+      "amount": 564,
+      "category": "B",
+      "date": "1402/09/13",
+      "description": "dsfdsf",
+      "id": 1
+    },
+    {
+      "title": "خرید خونه",
+      "type": "expense",
+      "amount": 0,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 2
+    },
+    {
+      "title": "خرید خونه",
+      "type": "income",
+      "amount": 100,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 3
+    },
+    {
+      "title": "خرید خونه",
+      "type": "income",
+      "amount": 100,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 4
+    },
+    {
+      "title": "خرید خونه",
+      "type": "expense",
+      "amount": 100,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 5
+    },
+    {
+      "title": "خرید خونه",
+      "type": "income",
+      "amount": 100,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 6
+    },
+    {
+      "title": "خرید خونه",
+      "type": "expense",
+      "amount": 100,
+      "category": "A",
+      "date": "1402/09/13",
+      "description": "klhjkh",
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "goupe": 1,
+      "name": " خرید خانه"
+    },
+    {
+      "id": 2,
+      "goupe": 1,
+      "name": "خرید پوشاک"
+    },
+    {
+      "id": 3,
+      "goupe": 2,
+      "name": "حقوق"
+    },
+    {
+      "id": 4,
+      "goupe": 1,
+      "name": "خرید لوازم خانه"
+    },
+    {
+      "id": 5,
+      "goupe": 1,
+      "name": "خرجی بچه ها"
+    },
+    {
+      "id": 6,
+      "goupe": 2,
+      "name": "واریزی کارفرما"
+    },
+    {
+      "id": 7,
+      "goupe": 2,
+      "name": "پول تو جیبی"
+    },
+    {
+      "id": 8,
+      "goupe": 2,
+      "name": "نمیدونم دیگه"
+    },
+
+    {
+      "id": 9,
+      "goupe": 2,
+      "name": "هتفرقه"
+    },
+    {
+      "id": 10,
+      "goupe": 2,
+      "name": "خدادادی"
+    },
+    {
+      "id": 11,
+      "goupe": 2,
+      "name": "همیناااا"
+    }
+  ],
+  "expenseCategories": [
+    {
+      "id": 1,
+      "goupe": 1,
+      "name": " خرید خانه"
+    },
+
+    {
+      "id": 4,
+      "goupe": 1,
+      "name": "خرید لوازم خانه"
+    },
+    {
+      "id": 5,
+      "goupe": 1,
+      "name": "متفرقه"
+    }
+  ],
+  "incomeCategories": [
+    {
+      "id": 3,
+      "goupe": 2,
+      "name": "حقوق"
+    },
+
+    {
+      "id": 6,
+      "goupe": 2,
+      "name": "واریزی کارفرما"
+    },
+    {
+      "id": 7,
+      "goupe": 2,
+      "name": "پول تو جیبی"
+    },
+    {
+      "id": 8,
+      "goupe": 2,
+      "name": "نمیدونم دیگه"
+    },
+
+    {
+      "id": 9,
+      "goupe": 2,
+      "name": "هتفرقه"
+    },
+    {
+      "id": 10,
+      "goupe": 2,
+      "name": "خدادادی"
+    },
+    {
+      "id": 11,
+      "goupe": 2,
+      "name": "همیناااا"
+    }
+  ]
+}
