@@ -4,7 +4,7 @@
   </h1>
   <form
     @submit.prevent="handleAction"
-    class="flex flex-col items-start justify-center min-w-[25rem] md:gap-8 px-8"
+    class="flex flex-col items-start justify-center min-w-[25rem] gap-4 md:gap-8 px-8"
   >
     <!-- group -->
     <div class="flex items-center justify-center gap-4">

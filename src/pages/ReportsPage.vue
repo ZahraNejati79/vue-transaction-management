@@ -19,9 +19,7 @@
       </div>
     </div>
   </header>
-  <section
-    class="flex flex-col items-center justify-center max-w-screen-xl mt-4"
-  >
+  <section class="flex flex-col items-center justify-center mt-4 bg-gray-600">
     <header
       class="flex items-center justify-between w-full max-w-full md:max-w-2xl px-4 py-2 rounded-lg"
     >
@@ -46,7 +44,7 @@
       </div>
     </header>
 
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
+    <div class="overflow-x-auto shadow-md sm:rounded-lg mt-2">
       <DisplayTransactionList
         @update-transaction-list="updateTransactionList"
         :transactions="transactionList"

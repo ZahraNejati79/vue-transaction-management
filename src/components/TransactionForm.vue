@@ -1,10 +1,10 @@
 <template>
-  <h1 class="text-xl font-bold w-full text-center mb-8">
+  <h1 class="text-xl font-bold w-full text-center mb-4">
     {{ action === "edit" ? "ویرایش" : "افزودن" }} تراکنش
   </h1>
   <form
     @submit.prevent="handleAction"
-    class="flex flex-col items-start justify-center min-w-[25rem] max-w-lg md:gap-8 px-8"
+    class="flex flex-col items-start justify-center w-full h-full md:min-w-[25rem] max-w-lg gap-4 px-8"
   >
     <!-- trans_type -->
     <div class="flex items-center justify-center gap-4">
@@ -30,7 +30,7 @@
     </div>
 
     <!-- description -->
-    <div class="flex items-center justify-between gap-2 w-full">
+    <div class="flex flex-col items-start justify-between gap-2 w-full">
       <label
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >توضیح</label
@@ -43,7 +43,7 @@
     </div>
 
     <!-- category -->
-    <div class="flex items-center justify-between gap-2 w-full">
+    <div class="flex flex-col items-start justify-between gap-2 w-full">
       <label
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >دسته</label
@@ -56,7 +56,7 @@
     </div>
 
     <!-- amount -->
-    <div class="flex items-center justify-between gap-2 w-full">
+    <div class="flex flex-col items-start justify-between gap-2 w-full">
       <label
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >مبلغ</label
@@ -70,12 +70,17 @@
     </div>
 
     <!-- data -->
-    <custom-date-picker
-      class="w-full rounded-lg"
-      v-model="transactionData.date"
-    ></custom-date-picker>
-
-    <button class="btn btn--primary w-full">
+    <div class="flex flex-col items-start justify-between gap-2 w-full">
+      <label
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >تاریخ</label
+      >
+      <custom-date-picker
+        class="w-full rounded-lg"
+        v-model="transactionData.date"
+      ></custom-date-picker>
+    </div>
+    <button class="btn btn--primary w-full mt-4">
       {{ action === "edit" ? "ویرایش" : "ثبت" }}
     </button>
   </form>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-2xl h-full container mx-auto">
+  <div>
     <InitialLayout />
   </div>
 </template>

@@ -2,10 +2,10 @@
   <div class="h-full w-full text-lg">
     <div class="flex flex-col items-center justify-center w-full mx-auto">
       <section
-        class="bg-primary-200 bg-opacity-50 flex flex-col items-center justify-center gap-8 p-8 rounded-lg"
+        class="border border-gray-300 flex flex-col items-center justify-center gap-8 p-8 rounded-lg"
       >
         <form
-          class="flex flex-col items-start justify-center min-w-[25rem] md:gap-4 px-8"
+          class="flex flex-col items-start justify-center min-w-[25rem] gap-4 px-8"
           @submit.prevent="editUserHandler"
         >
           <!-- usrname -->

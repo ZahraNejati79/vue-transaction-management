@@ -18,6 +18,7 @@ import {
   uniFilter,
   uniCloudDownload,
   uniPrint,
+  uniBars,
 } from "vue-unicons/dist/icons";
 import { createPinia } from "pinia";
 import VueApexCharts from "vue3-apexcharts";
@@ -35,6 +36,7 @@ Unicon.add([
   uniFilter,
   uniCloudDownload,
   uniPrint,
+  uniBars,
 ]);
 
 const pinia = createPinia();

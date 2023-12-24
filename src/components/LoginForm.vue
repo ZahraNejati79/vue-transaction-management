@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-xl bg-white rounded-lg">
+  <div class="max-w-xl border border-gray-300 bg-white rounded-lg">
     <h1 class="text-xl font-bold w-full text-center mb-8 mt-4">
       {{ action === "signup" ? "ثبت نام" : "ورود" }}
     </h1>
     <form
       @submit.prevent="handleLogin"
-      class="flex flex-col items-start justify-center min-w-[25rem] md:gap-8 px-8"
+      class="flex flex-col items-start justify-center min-w-[25rem] gap-4 md:gap-8 px-8"
     >
       <!-- userName -->
       <div class="flex flex-col items-start justify-center gap-2 w-full">
@@ -36,17 +36,18 @@
         />
       </div>
 
-      <button class="w-full btn btn--primary mb-8">
+      <button class="w-full btn btn--primary">
         {{ action === "signup" ? "ثبت نام" : "ورود" }}
       </button>
+      <div class="mb-8">
+        <div v-if="action === 'login'" @click="goToSignup">
+          هنور ثبت نام نکرده اید؟
+        </div>
+        <div v-if="action === 'signup'" @click="goToLogin">
+          قبلا ثبت نام کرده اید؟
+        </div>
+      </div>
     </form>
-
-    <div v-if="action === 'login'" @click="goToSignup">
-      هنور ثبت نام نکرده اید؟
-    </div>
-    <div v-if="action === 'signup'" @click="goToLogin">
-      قبلا ثبت نام کرده اید؟
-    </div>
   </div>
 </template>
 <script setup>
