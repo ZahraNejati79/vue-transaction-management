@@ -1,11 +1,11 @@
 <template>
-  <div class="h-full w-full text-lg">
-    <div class="flex flex-col items-center justify-center w-full mx-auto">
+  <div>
+    <div class="flex flex-col items-center justify-center mx-auto">
       <section
-        class="border border-gray-300 flex flex-col items-center justify-center gap-8 p-8 rounded-lg"
+        class="border border-gray-300 max-w-[22rem] md:max-w-screen-lg flex flex-col items-center justify-center gap-8 rounded-lg p-2 py-4"
       >
         <form
-          class="flex flex-col items-start justify-center min-w-[25rem] gap-4 px-8"
+          class="flex flex-col items-start justify-center min-w-[25rem] gap-4 px-12"
           @submit.prevent="editUserHandler"
         >
           <!-- usrname -->
@@ -72,6 +72,7 @@ import { ref, reactive, onMounted } from "vue";
 import { getUser } from "../service/user/getUser";
 import { editUser } from "../service/user/editUser";
 const userDate = ref({
+  id: "",
   username: "",
   passwod: "",
   first_name: "",
@@ -81,7 +82,7 @@ function editUserHandler() {
   editUser(userDate.value).then(() => updateUserData());
 }
 function updateUserData() {
-  getUser().then((data) => (userDate.value = data));
+  getUser().then((data) => (userDate.value = data[0]));
 }
 onMounted(() => {
   updateUserData();

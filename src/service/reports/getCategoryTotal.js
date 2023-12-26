@@ -4,9 +4,8 @@ export async function getCategoryTotal(trans_type) {
     const { data } = await http.get(
       `report/categories_wise/?trans_type=${trans_type}`
     );
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 }

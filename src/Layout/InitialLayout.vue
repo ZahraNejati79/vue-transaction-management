@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen min-w-screen">
     <Navbar />
-    <main class="bg-white mx-auto">
+    <main class="mx-auto flex items-center justify-center">
       <div class="h-full pt-8 container">
         <router-view></router-view>
       </div>

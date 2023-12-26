@@ -58,4 +58,5 @@ app.use(Vue3PersianDatetimePicker, {
     autoSubmit: false,
   },
 });
+app.component("DatePicker", Vue3PersianDatetimePicker);
 app.mount("#app");

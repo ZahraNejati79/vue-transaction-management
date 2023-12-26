@@ -18,7 +18,7 @@ export async function isAuthenticated() {
     if (localStorage.getItem(REFRESH_TOKEN_KEY)) {
       // Attempt to refresh the access token
       try {
-        const response = await http.get("/api/token/refresh/");
+        const response = await http.post("/api/token/refresh/");
         localStorage.setItem(ACCESS_TOKEN_KEY, response.data);
         return true;
       } catch (refreshError) {

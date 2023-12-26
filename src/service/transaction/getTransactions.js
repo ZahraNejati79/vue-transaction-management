@@ -6,12 +6,10 @@ export async function getTransactions(group) {
   try {
     if (group) {
       const { data } = await http.get(`/transactions?trans-type=${group}`);
-      return data;
+      return data.results;
     } else {
       const { data } = await http.get("/transactions/");
-      return data;
+      return data.results;
     }
-  } catch (error) {
-    toast.error("خطا در ارتباط با سرور");
-  }
+  } catch (error) {}
 }

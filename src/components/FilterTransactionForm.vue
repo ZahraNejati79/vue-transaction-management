@@ -1,7 +1,6 @@
 <template>
   <form
-    class="flex flex-col items-start justify-center min-w-[25rem] max-w-lg md:gap-8 px-8"
-    @submit.prevent="filterHandler"
+    class="flex flex-col items-start justify-center min-w-[25rem] max-w-lg gap-8 md:px-8 mx-auto px-12"
   >
     <!-- trans_type -->
     <div class="flex items-center justify-center gap-4">
@@ -41,30 +40,26 @@
 
     <!-- data -->
     <custom-date-picker
+      range="true"
       class="w-full rounded-lg"
       v-model="filterData.date"
     ></custom-date-picker>
 
-    <button class="btn btn--primary w-full">اعمال فیلتر</button>
+    <button
+      @click="resetFilterHandler"
+      class="btn w-full text-primary-900 font-bold py-3 px-4 bg-white shadow-lg shadow-primary-200 border border-primary-900"
+    >
+      حذف فیلتر
+    </button>
   </form>
 </template>
 <script setup>
-import {
-  reactive,
-  onMounted,
-  ref,
-  watchEffect,
-  defineEmits,
-  defineProps,
-} from "vue";
+import { reactive, onMounted, ref, watchEffect, defineEmits } from "vue";
 import { getCategories } from "../service/category/getCategories";
 
-const emit = defineEmits("filter-to-params");
-const filterData = reactive({
-  trans_type: "",
-  category: "",
-  date: "",
-});
+const emit = defineEmits("filter-to-params", "closeModal", "resetFilter");
+const props = defineProps(["closeModal", "filterValue"]);
+const filterData = reactive(props.filterValue);
 
 const categoryList = ref([]);
 
@@ -81,7 +76,8 @@ watchEffect(() => {
   updateCategory();
 });
 
-function filterHandler() {
-  emit("filter-to-params", filterData);
+function resetFilterHandler() {
+  emit("resetFilter");
+  emit("closeModal");
 }
 </script>

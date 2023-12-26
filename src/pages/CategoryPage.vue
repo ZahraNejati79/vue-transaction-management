@@ -1,18 +1,22 @@
 <template>
   <div class="h-full w-full text-lg">
     <div class="flex flex-col items-center justify-center w-full mx-auto">
-      <button @click="isOpenModal = true" class="text-primart-500 py-4">
+      <button
+        @click="isOpenModal = true"
+        class="py-4 mb-4 text-primary-900 font-bold"
+      >
         افزودن عنوان جدید
       </button>
       <Modal @closeModal="isOpenModal = false" :isOpen="isOpenModal">
         <CategoryForm
+          @closeModal="isOpenModal = false"
           action="submit"
           :initial-dtate="{ group: 1, name: '' }"
           @update-category-list="updateCategoryList"
         />
       </Modal>
       <section
-        class="flex flex-col md:flex-row justify-between gap-8 w-full h- items-stretch"
+        class="flex flex-col items-center md:flex-row justify-between xl:justify-evenly gap-8 w-full md:items-stretch"
       >
         <DisplayCategories
           name="دسته های دخل"
@@ -39,12 +43,12 @@ const expenseCategories = ref([]);
 const isOpenModal = ref(false);
 
 async function updateCategoryList() {
-  // get expense
+  // get expense categories
   getCategories("out").then((expenseCategoryList) => {
     expenseCategories.value = expenseCategoryList;
   });
 
-  // get income
+  // get income categories
   getCategories("in").then(
     (incomeCategoryList) => (incomeCategories.value = incomeCategoryList)
   );

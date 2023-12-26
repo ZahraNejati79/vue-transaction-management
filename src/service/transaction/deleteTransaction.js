@@ -6,6 +6,6 @@ export async function deleteTransaction(transactionId) {
     await http.delete(`/transactions/${transactionId}/`);
     toast.success("تراکنش با موفقیت حذف شد");
   } catch (error) {
-    toast.error(" خطا در ارتباط با سرور");
+    toast.error("خطا در حذف تراکنش");
   }
 }

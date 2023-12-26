@@ -80,6 +80,7 @@
         v-model="transactionData.date"
       ></custom-date-picker>
     </div>
+
     <button class="btn btn--primary w-full mt-4">
       {{ action === "edit" ? "ویرایش" : "ثبت" }}
     </button>
@@ -135,9 +136,10 @@ function handleAction() {
       .then(() => emit("update-transaction-list"))
       .then(() => emit("closeModal"));
   } else {
-    postTransaction(transactionData).then(() =>
-      emit("update-transaction-list")
-    );
+    postTransaction(transactionData).then(() => {
+      emit("update-transaction-list");
+      emit("closeModal");
+    });
   }
   Object.assign(transactionData, {
     trans_type: 0,

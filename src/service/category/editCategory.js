@@ -6,6 +6,6 @@ export async function editCategory(categoryId, categoryData) {
     await http.put(`/categories/${categoryId}/`, categoryData);
     toast.success("دسته با موفقیت ویرایش شد");
   } catch (error) {
-    toast.error(" خطا در ارتباط با سرور");
+    toast.error(" خطا در ویرایش دسته");
   }
 }

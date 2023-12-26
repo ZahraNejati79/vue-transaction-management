@@ -1,5 +1,7 @@
 <template>
-  <div class="max-w-xl border border-gray-300 bg-white rounded-lg">
+  <div
+    class="max-w-[20rem] md:max-w-xl border border-gray-300 bg-white rounded-lg"
+  >
     <h1 class="text-xl font-bold w-full text-center mb-8 mt-4">
       {{ action === "signup" ? "ثبت نام" : "ورود" }}
     </h1>
@@ -40,10 +42,18 @@
         {{ action === "signup" ? "ثبت نام" : "ورود" }}
       </button>
       <div class="mb-8">
-        <div v-if="action === 'login'" @click="goToSignup">
+        <div
+          class="cursor-pointer hover:font-bold text-primary-900"
+          v-if="action === 'login'"
+          @click="goToSignup"
+        >
           هنور ثبت نام نکرده اید؟
         </div>
-        <div v-if="action === 'signup'" @click="goToLogin">
+        <div
+          class="cursor-pointer hover:font-bold text-primary-900"
+          v-if="action === 'signup'"
+          @click="goToLogin"
+        >
           قبلا ثبت نام کرده اید؟
         </div>
       </div>

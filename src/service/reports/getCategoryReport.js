@@ -14,6 +14,6 @@ export async function getCategoryReport(category) {
       return data;
     }
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 }

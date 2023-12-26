@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-primary-100 p-4 rounded-lg">
-    <h2>{{ name }}</h2>
+  <div class="bg-primary-100 flex flex-col rounded-lg">
+    <h2 class="p-2">{{ name }}</h2>
     <apexchart
-      width="380"
+      class="w-[340px] md:w-[380px]"
       type="donut"
       :options="options"
       :series="series"

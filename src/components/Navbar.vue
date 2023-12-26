@@ -20,7 +20,6 @@
               <button @click="isOpenNavModal = false">
                 <unicon name="multiply" fill="royalblue"></unicon>
                 >
-                <AiOutlineClose />
               </button>
             </div>
             <ul className=" flex-col border-t-gray-500 pt-4">
@@ -84,7 +83,7 @@
           </router-link>
           <router-link v-if="!user.isAuthenticatedUser" to="/login">
             <li class="flex items-center justify-center p-4">
-              <unicon name="signin" fill="royalblue"></unicon>
+              <unicon name="signout" fill="royalblue"></unicon>
             </li>
           </router-link>
           <li
@@ -92,7 +91,7 @@
             @click="logoutHandler"
             class="flex items-center justify-center p-4"
           >
-            <unicon name="signout" fill="royalblue"></unicon>
+            <unicon name="signin" fill="royalblue"></unicon>
           </li>
         </ul>
       </div>

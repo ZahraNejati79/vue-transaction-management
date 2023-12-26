@@ -9,7 +9,7 @@ const REFRESH_TOKEN_KEY = "refreshToken";
 // Define the user store
 export const useUserStore = defineStore("user", {
   state: () => ({
-    isAuthenticatedUser: false, // Set initial state to false
+    isAuthenticatedUser: true, // Set initial state to true
     user: "",
   }),
 
@@ -40,6 +40,8 @@ export const useUserStore = defineStore("user", {
           username,
           password,
         });
+
+        this.user = userdata.username;
       } catch (error) {
         throw error;
       }
@@ -59,7 +61,7 @@ export const useUserStore = defineStore("user", {
           .catch(() => {
             if (localStorage.getItem(REFRESH_TOKEN_KEY)) {
               http
-                .get("/api/token/refresh/")
+                .get("/token/refresh/")
                 .then((response) => {
                   localStorage.setItem(ACCESS_TOKEN_KEY, response.data);
                   this.isAuthenticatedUser = true;

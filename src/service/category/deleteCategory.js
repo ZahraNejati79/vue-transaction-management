@@ -6,6 +6,6 @@ export async function deleteCategory(categoryId) {
     await http.delete(`/categories/${categoryId}/`);
     toast.success("دسته با موفقیت حذف شد");
   } catch (error) {
-    toast.error(" خطا در ارتباط با سرور");
+    toast.error(" خطا در حذف دسته");
   }
 }

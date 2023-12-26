@@ -69,7 +69,10 @@ function handleAction() {
       .then(() => emit("update-category-list"))
       .then(() => emit("closeModal"));
   } else {
-    postCategory(categoryData).then(() => emit("update-category-list"));
+    postCategory(categoryData).then(() => {
+      emit("closeModal");
+      emit("update-category-list");
+    });
   }
   Object.assign(categoryData, {
     cat_type: 1,

@@ -11,8 +11,9 @@ link.interceptors.request.use((config) => {
   const accessToken = localStorage.getItem("accessToken");
   // console.log("accessToken",accessToken)
   // Set the Authorization header with the bearer token
-  config.headers.Authorization = `Bearer ${accessToken}`;
-
+  if (accessToken) {
+    config.headers.Authorization = `Bearer ${accessToken}`;
+  }
   return config;
 });
 
@@ -21,6 +22,7 @@ const http = {
   delete: link.delete,
   post: link.post,
   put: link.put,
+  patch: link.patch,
 };
 
 export default http;

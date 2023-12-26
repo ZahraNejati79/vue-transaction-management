@@ -6,6 +6,6 @@ export async function editTransaction(transactionId, transactionData) {
     await http.put(`/transactions/${transactionId}/`, transactionData);
     toast.success("تراکنش با موفقیت ویرایش شد");
   } catch (error) {
-    toast.error(" خطا در ویرایش تراکنش ارتباط با سرور");
+    toast.error(" خطا در ویرایش تراکنش ");
   }
 }

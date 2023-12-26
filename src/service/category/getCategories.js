@@ -6,12 +6,12 @@ export async function getCategories(cat_type) {
   try {
     if (cat_type) {
       const { data } = await http.get(`/categories/?cat_type=${cat_type}`);
-      return data;
+      return data.results;
     } else {
       const { data } = await http.get("/categories/");
       return data.results;
     }
   } catch (error) {
-    toast.error("خطا در ارتباط با سرور");
+    console.log(error.message);
   }
 }

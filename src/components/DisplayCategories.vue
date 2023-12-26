@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-primary-100 bg-opacity-30 h-full w-full md:w-1/2 flex flex-col items-center justify-center pt-4 rounded-lg"
+    class="bg-primary-100 bg-opacity-30 h-full w-4/6 md:w-1/2 2xl:w-1/3 flex flex-col items-center justify-center pt-4 rounded-lg"
   >
-    <h1 class="w-full text-center">{{ name }}</h1>
-    <ul class="w-full">
+    <h1 class="w-full text-center text-sm font-bold">{{ name }}</h1>
+    <ul class="w-full text-sm">
       <li
         class="transition duration-300 flex items-center justify-between hover:bg-primary-100 p-4 border-b bprder-primary-100 last:border-b-0"
         v-for="category in categories"
@@ -14,13 +14,21 @@
             @click="handleDeleteCategory(category.id)"
             class="cursor-pointer"
           >
-            <unicon name="trash-alt" fill="royalblue"></unicon>
+            <unicon
+              class="w-4 h-4 md:h-6 md:w-6"
+              name="trash-alt"
+              fill="royalblue"
+            ></unicon>
           </button>
           <button
             @click="handleEditCategoryItem(category)"
             class="cursor-pointer"
           >
-            <unicon name="edit" fill="royalblue"></unicon>
+            <unicon
+              class="w-4 h-4 md:h-6 md:w-6"
+              name="edit"
+              fill="royalblue"
+            ></unicon>
           </button>
           <Modal :isOpen="isOpenModal" @closeModal="isOpenModal = false">
             <CategoryForm
